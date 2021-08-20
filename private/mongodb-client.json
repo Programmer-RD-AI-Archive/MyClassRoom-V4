@@ -1,0 +1,3 @@
+{
+  "MongoDB-Client-Url": "mongodb://Ranuga:ranuga2008@mcr-shard-00-00.sah9v.mongodb.net:27017,mcr-shard-00-01.sah9v.mongodb.net:27017,mcr-shard-00-02.sah9v.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-8dahrs-shard-0&authSource=admin&retryWrites=true&w=majority"
+}
