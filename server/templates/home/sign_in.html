@@ -1,0 +1,40 @@
+{% extends "home/base.html" %}
+{% block head %}
+<title>
+    Sign In
+</title>
+<style>
+    .jumbotron {
+        color: black !important;
+    }
+</style>
+<link rel="icon" style="border-radius: 25px !important;"
+    href="https://myclassroom.online/images/LOGO-fevicon-yellow.png">
+{% endblock %}
+{% block body %}
+<div class="container">
+    <div class="jumbotron">
+        <form method="POST" action="">
+            <div class="form-group">
+                <label for="user_name"><b> User Name (Name) </b></label>
+                <input type="text" name="UN" required placeholder="Please enter your user name (name)"
+                    class="form-control" id="user_name" aria-describedby="emailHelp">
+            </div>
+            <div class="form-group">
+                <label for="password"><b> Password or Email</b></label>
+                <input type="text" name="PE" required placeholder="Please enter your user name (name)"
+                    class="form-control" id="password" required placeholder="Please enter your email or password">
+                <div class="form-group">
+                    <label for="role"><b> Role </b></label>
+                    <select id="role" name="R" class="form-control" required>
+                        <option selected>Choose</option>
+                        <option>Teacher</option>
+                        <option>Student</option>
+                        <option>Admin</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
