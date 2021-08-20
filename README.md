@@ -1,2 +1,3 @@
 # MyClassRoom-V4
-MyClassRoom-V4 this is a bit modified from MCR-V3
+if you have any questions please add them to the issues page of this project 
+thank you
