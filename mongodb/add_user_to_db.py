@@ -1,11 +1,12 @@
 import json
-from pymongo import *
+
 from get_the_last_id import *
+from pymongo import *
 
 
 def get_link():
     with open(
-        "/home/indika/Programming/Projects/Python/Web-Dev/MCR-V4/private/mongodb-client.json"
+            "/home/indika/Programming/Projects/Python/Web-Dev/MCR-V4/private/mongodb-client.json"
     ) as json_info:
         info = json.load(json_info)
     return info["MongoDB-Client-Url"]
@@ -24,28 +25,23 @@ if teacher.upper() == "Y":
     subject = input("Subject : ")
     for i in range(251):
         id_ = last_id()
-        collection.insert_one(
-            {
-                "_id": id_,
-                "User Name": user_name,
-                "Password": password,
-                "Email": email,
-                "Role": role,
-                "Subject": subject,
-            }
-        )
-        print(i)
-        print("Done...")
-else:
-    id_ = last_id()
-    collection.insert_one(
-        {
+        collection.insert_one({
             "_id": id_,
             "User Name": user_name,
             "Password": password,
             "Email": email,
             "Role": role,
-        }
-    )
+            "Subject": subject,
+        })
+        print(i)
+        print("Done...")
+else:
+    id_ = last_id()
+    collection.insert_one({
+        "_id": id_,
+        "User Name": user_name,
+        "Password": password,
+        "Email": email,
+        "Role": role,
+    })
     print("Done...")
-
